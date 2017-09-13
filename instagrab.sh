@@ -31,8 +31,8 @@ printf "Download finish. Saved at $RED$(pwd)$END"
 }
 
 echo "Chosse function:"
-echo "<1> Get avatar user"
-echo "<2> Get image"
+echo "<1> 👤 Get avatar user 👤"
+echo "<2> 🎆 Get image 🎆"
 read function
 case $function in
 "1")
