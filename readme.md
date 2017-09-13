@@ -1,7 +1,7 @@
 #Instagrab
 > Easy way to get ava and picture on instagram, easy to use , just use wget, sed, grep 💕💕💕💕
 
-![screenshot](/images/screenshot.png)
+![screenshot](/images/screenshoot.png)
 
 ## How to install:
 
