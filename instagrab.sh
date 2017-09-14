@@ -34,6 +34,7 @@ echo "--------------------------------------------------------------------------
 }
 
 function menu {
+  echo ""
   echo "Chosse function:"
   echo "<1> 👤 Get avatar user 👤"
   echo "<2> 🎆 Get image 🎆"
