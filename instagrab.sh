@@ -10,8 +10,8 @@ checkPrivate=$(curl -s $url | grep "The link you followed may be broken, or the 
 if [[ "$checkPrivate" != *"The link you followed may be broken, or the page may have been removed"* ]]
  then
   echo "Downloading the picture please wait"
-  get_url=$(curl -s "$url" | grep -i "og:image" | sed 's/  h//; s/<meta property="og:image" content="//; s, />,,g; s/"//')
-  linkdown=$(echo ""$get_url"")
+  get_url=$(curl -s "$url" | grep -i "og:image" | sed 's/   h//; s/<meta property="og:image" content="//; s, />,,g; s/"//; s/ //; s/ //; s/ //; s/ //; s/ //; s/ //; s/ //')
+  linkdown=$(echo "$get_url")
   wget "$linkdown"
   printf "Download finish. Saved at $RED$(pwd)$END\n"
   echo "---------------------------------------------------------------------------"
