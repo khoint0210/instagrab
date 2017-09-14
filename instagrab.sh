@@ -1,5 +1,3 @@
-# curl -F 'client_id=e0b25756e81a4d779a003b9c8fd3ad19' -F 'client_secret=171a010ae6b54e7bacc2cd7c42a02a19' -F 'grant_type=authorization_code' -F 'redirect_uri=http://motherday.herokuapp.com' -F 'token=1411738982.e0b2575.52cf152a6af74b828d0b00bfe842bb3b' https://api.instagram.com/oauth/access_token
-# https://www.instagram.com/oauth/authorize/?client_id=e0b25756e81a4d779a003b9c8fd3ad19&redirect_uri=http://motherday.herokuapp.com&response_type=token
 RED='\033[91m'
 END='\e[0m'
 
