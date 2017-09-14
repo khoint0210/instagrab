@@ -15,9 +15,11 @@ if [[ "$checkPrivate" != *"The link you followed may be broken, or the page may 
   get_url=$(curl -s "$url" | grep -i "og:image" | sed 's/  h//; s/<meta property="og:image" content="//; s, />,,g; s/"//')
   linkdown=$(echo ""$get_url"")
   wget "$linkdown"
-  printf "Download finish. Saved at $RED$(pwd)$END"
+  printf "Download finish. Saved at $RED$(pwd)$END\n"
+  echo "---------------------------------------------------------------------------"
 else
-echo "Unable to download picture, User are setting privte mode 😢 srr"
+echo "Unable to download picture, User are setting privte mode 😢 srr\n"
+echo "---------------------------------------------------------------------------"
 fi
 }
 
@@ -27,17 +29,27 @@ printf "Instagram user name:\n"
 read user_name
 get_link=$(curl "https://www.instagram.com/$user_name/" | grep -i "og:image" | sed 's/  h//; s/<meta property="og:image" content="//; s, />,,g; s/"//; s/            h/h/; s/s150x150//')
 wget "$get_link"
-printf "Download finish. Saved at $RED$(pwd)$END"
+printf "Download finish. Saved at $RED$(pwd)$END\n"
+echo "---------------------------------------------------------------------------"
 }
 
-echo "Chosse function:"
-echo "<1> 👤 Get avatar user 👤"
-echo "<2> 🎆 Get image 🎆"
-read function
+function menu {
+  echo "Chosse function:"
+  echo "<1> 👤 Get avatar user 👤"
+  echo "<2> 🎆 Get image 🎆"
+  echo "<3> ⛔️ Exit ⛔️️"
+  read function
 case $function in
-"1")
-get_ava ;;
-"2")
-get_image ;;
+  "1")
+    get_ava ;;
+  "2")
+    get_image ;;
+  "3")
+    clear
+    exit ;;
 esac
+}
 
+while true
+do menu
+done
