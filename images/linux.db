@@ -1,0 +1,14 @@
+$TTL     86400
+@        IN         SOA         www.linux.org. root (
+                                3;
+                                28800;
+                                7200;
+                                604800;
+                                86400;
+)
+         IN         NS          www.linux.org.
+         IN         MX 10       www
+www      IN         A           192.168.1.1
+web      IN         A	          192.168.1.1
+ftp	     IN	        A		        192.168.1.1
+mail     IN         CNAME       www
