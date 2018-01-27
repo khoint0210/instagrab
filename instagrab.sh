@@ -29,14 +29,14 @@ fi
 }
 
 
-function get_ava {
-printf "Instagram user name:\n"
-read user_name
-get_link=$(curl "https://www.instagram.com/$user_name/" | grep -i "og:image" | sed 's/  h//; s/<meta property="og:image" content="//; s, />,,g; s/"//; s/            h/h/; s/s150x150//')
-wget "$get_link"
-printf "Download finish. Saved at $RED$(pwd)$END\n"
-echo "---------------------------------------------------------------------------"
-}
+#function get_ava {
+#printf "Instagram user name:\n"
+#read user_name
+#get_link=$(curl "https://www.instagram.com/$user_name/" | grep -i "og:image" | sed 's/  h//; s/<meta property="og:image" content="//; s, />,,g; s/"//; s/            h/h/; s/s150x150//')
+#wget "$get_link"
+#printf "Download finish. Saved at $RED$(pwd)$END\n"
+#echo "---------------------------------------------------------------------------"
+#}
 
 function menu {
   echo ""
@@ -47,15 +47,18 @@ function menu {
   read function
 case $function in
   "1")
-    get_ava ;;
+    echo "This function is currenly fixed by Instagram 😢 srr you guys"
+    echo "---------------------------------------------------------------------------";;
+    #get_ava
   "2")
     get_image ;;
   "3")
     clear
-    exit ;;
+    exit 0 ;;
 esac
 }
 
+#Main
 while true
 do menu
 done
